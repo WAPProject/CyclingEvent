@@ -32,7 +32,11 @@
                 <input class="submit"  type="submit" value="登录">
             </label>
         </div>
-
+        <div class="item">
+            <label >
+                <span class="reglink">Dont' have a account? <a href="register.jsp" class="link">Sign up</a> </span>
+            </label>
+        </div>
     </form>
 </div>
 <script src="js/jquery.min.js"></script>

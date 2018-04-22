@@ -83,6 +83,18 @@ input:hover{
     background-color:#20A0FF;
 }
 
+.reglink{
+    color: #505458;
+    font-size:12px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.link{
+    color: #20A0FF;
+}
+
+
 /************************login.jsp样式结束*********************/
 /***********index.jsp样式开始************************/
 
