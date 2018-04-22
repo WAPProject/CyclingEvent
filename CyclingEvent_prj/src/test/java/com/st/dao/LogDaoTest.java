@@ -1,14 +1,12 @@
 package com.st.dao;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import com.st.entity.Log;
+import org.junit.Test;
 
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 /**
  * Created by tao on 2017/4/4 0004.
  */
@@ -20,7 +18,7 @@ public class LogDaoTest {
         Log log = new Log(111111,1001,new Date(System.currentTimeMillis()),"这是一条测试日志",8,"中","","通过");
         boolean result = ld.add(log);
         ld.delete(log.getId());
-        assertEquals(true,result);
+        assertEquals(true,result );
     }
     @Test
     public void testGet(){
