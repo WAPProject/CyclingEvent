@@ -7,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.cs.servlet.UserServlet" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,23 +132,27 @@
             </div>
 
             <div class="row">
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride One</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-warning " >Resume</button>
-                            <button type="button"  class="btn btn-success " >Start</button>
+                <c:forEach varStatus="status" items="${notstart}" var="ride" >
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Ride ${status.count}</a>
+                                </h4>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <p class="card-text">${ride.route}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button"  class="btn btn-warning " >join</button>
+                                <c:if test="${ride.creatorUserId eq currentuserid}">
+                                <button type="button"  class="btn btn-success " >Start</button>
+                                </c:if>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </c:forEach>
+
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">

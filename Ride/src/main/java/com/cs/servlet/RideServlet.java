@@ -55,6 +55,7 @@ public class RideServlet extends HttpServlet {
         } else if ("listpaticipants".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
             List<User> userList = rideService.listPaticipant(rideId);
+            req.setAttribute("userList",userList);
             req.getRequestDispatcher(req.getContextPath() + "/listpaticipants.jsp").forward(req, resp);
         } else if ("end".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");

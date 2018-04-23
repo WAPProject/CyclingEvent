@@ -8,7 +8,7 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Create ride</title>
+    <title>Create a ride event</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
@@ -18,13 +18,14 @@
     <form class="login-container" action="ride?action=add" method="post">
         <h3 class="title">Create Ride</h3>
         <div class="item">
-            <label >route name
-                <input name="route" class="input" type="text"  placeholder="User name">
+            <label >route
+                <input name="route" class="input" type="text"  placeholder="route">
+                <%--<textarea class="input" name="route" id="route" cols="30" rows="10"></textarea>--%>
             </label>
         </div>
         <div class="item">
             <label >begindate
-                <input name="begindate" class="input"  value="2018-4-23 13:00:00 "  />
+                <input name="begindate" type="date" class="input"  />
             </label>
         </div>
 
