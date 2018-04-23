@@ -17,7 +17,7 @@ import java.util.List;
 public class RideService {
     public List<Ride> listRideByStatus(String status, String order){
         SqlSession session = MybatisUtil.getSqlSession();
-        List<Ride>rideList = session.getMapper(RideMapper.class).listRideByStatus("notstart","asc");
+        List<Ride>rideList = session.getMapper(RideMapper.class).listRideByStatus(status,"asc");
         session.commit();
         MybatisUtil.closeSqlSession();
         return rideList;
@@ -30,7 +30,7 @@ public class RideService {
         return ride;
     }
 
-    public void updateStatus(String id, String status){
+        public void updateStatus(String id, String status){
         SqlSession session = MybatisUtil.getSqlSession();
         session.getMapper(RideMapper.class).updateStatus(id,status);
         session.commit();
