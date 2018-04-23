@@ -15,7 +15,8 @@
 </head>
 <body>
 <div id="app" >
-    <form class="login-container" action="login" method="post">
+    <form class="login-container" action="user?action=login" method="post">
+        <%--<input name="action" type="hidden" value="login"/>--%>
         <h3 class="title">Login</h3>
         <div class="item">
             <label >
@@ -24,7 +25,7 @@
         </div>
         <div class="item">
             <label >
-                <input name="password" class="input" type="password"  placeholder="密码">
+                <input name="password" class="input" type="password"  placeholder="password">
             </label>
         </div>
         <div class="item">
