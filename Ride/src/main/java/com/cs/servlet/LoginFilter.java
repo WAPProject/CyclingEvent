@@ -38,7 +38,7 @@ public class LoginFilter implements Filter {
             chain.doFilter(request, response);
 
         }else if(registerPage.equals(targetURL)){
-            //这里表示如果当前页面是登陆页面，跳转到登陆页面
+            //这里表示如果当前页面是注册页面，跳转到注册页面
             chain.doFilter(request, response);
         } else{
             if(loginServlet.equals(targetURL)){
