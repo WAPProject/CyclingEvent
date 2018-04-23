@@ -24,7 +24,7 @@
         </div>
         <div class="item">
             <label >
-                <input name="password" class="input" type="password"  placeholder="密码">
+                <input name="password" class="input" type="password"  placeholder="password">
             </label>
         </div>
         <div class="item">
