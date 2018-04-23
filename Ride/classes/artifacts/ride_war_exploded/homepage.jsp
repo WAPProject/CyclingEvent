@@ -7,9 +7,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.cs.servlet.UserServlet" %>
 <!DOCTYPE html>
 <html lang="en">
-g
+
 <head>
 
     <meta charset="utf-8">
@@ -29,13 +30,41 @@ g
 
 <body>
 
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    模态框（Modal）标题
+                </h4>
+            </div>
+            <div class="modal-body">
+                在这里添加一些文本
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+
 <!-- Navigation -->
 <%----%>
 <%--bigdragon--%>
 <%----%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="createRide">Create a ride</a>
+        <a class="navbar-brand" href="ride?action=create">Create a ride</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -47,9 +76,7 @@ g
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign up</a>
-                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
                 </li>
@@ -105,23 +132,27 @@ g
             </div>
 
             <div class="row">
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride One</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-warning " >Resume</button>
-                            <button type="button"  class="btn btn-success " >Start</button>
+                <c:forEach varStatus="status" items="${notstart}" var="ride" >
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">Ride ${status.count}</a>
+                                </h4>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <p class="card-text">${ride.route}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button"  class="btn btn-warning " >join</button>
+                                <c:if test="${ride.creatorUserId eq currentuserid}">
+                                <button type="button"  class="btn btn-success " >Start</button>
+                                </c:if>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </c:forEach>
+
 
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
@@ -135,7 +166,7 @@ g
                         </div>
                         <div class="card-footer">
                             <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " >Pause</button>
+                            <button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>
                         </div>
                     </div>
                 </div>

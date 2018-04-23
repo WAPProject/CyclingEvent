@@ -7,16 +7,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.cs.servlet.UserServlet" %>
+<%
+    String path = request.getContextPath();
+%>
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
 
     <title>Ride Website</title>
 
@@ -94,9 +97,9 @@
 
             <h1 class="my-4"></h1>
             <div class="list-group">
-                <a href="#" class="list-group-item">Outgoing</a>
-                <a href="#" class="list-group-item">Finished</a>
-                <a href="#" class="list-group-item">Upcomming</a>
+                <a href="#" class="list-group-item OutgoingBtn" >Outgoing</a>
+                <a href="#" class="list-group-item FlagBtn">Flag</a>
+                <a href="#" class="list-group-item UpcommingBtn">Upcomming</a>
             </div>
 
         </div>
@@ -154,92 +157,75 @@
                 </c:forEach>
 
 
-                <div class="col-lg-4 col-md-6 mb-4">
+            <c:forEach var="ride"  items="${inprocessing}" >
+                <div class="col-lg-4 col-md-6 mb-4 inprocessing">
                     <div class="card h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Ride Two</a>
+                                <a href="#">${ride.route}</a>
                             </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                            <h5>${ride.route}</h5>
+                            <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
                         </div>
                         <div class="card-footer">
-                            <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>
+                            <button type="button"  class="btn btn-default " rideId="${ride.id}"  id="join" >Join</button>
+                            <%--<button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause" data-toggle="modal" data-target="#myModal" >Pause</button>--%>
+                            <button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause"  >Pause</button>
+                            <button type="button"  class="btn btn-warning" id="endRide"   rideId="${ride.id}" >End</button>
+                            <%--<button type="button"  class="btn btn-success " >Start</button>--%>
                         </div>
                     </div>
                 </div>
+            </c:forEach>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride Three</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " >Pause</button>
+                <c:forEach var="wride"  items="${notstart}" >
 
-                            <%--<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>--%>
+
+                    <div class="col-lg-4 col-md-6 mb-4 notstart">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">${wride.route}</a>
+                                </h4>
+                                <h5>${wride.route}</h5>
+                                    <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
+                            </div>
+                            <div class="card-footer">
+                                <%--<button type="button"  class="btn btn-default " >Join</button>--%>
+                                <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
+                                    <%--<button type="button"  class="btn btn-warning " >Resume</button>--%>
+                                    <button type="button"  class="btn btn-success " id="start" rideId="${wride.id}" >Start</button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </c:forEach>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride Four</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " >Pause</button>
+                <c:forEach var="fride"  items="${flag}" >
+
+
+                    <div class="col-lg-4 col-md-6 mb-4 flag">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="#">${fride.route}</a>
+                                </h4>
+                                <h5>${fride.route}</h5>
+                                    <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
+                            </div>
+                            <div class="card-footer">
+                                    <%--<button type="button"  class="btn btn-default " >Join</button>--%>
+                                    <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
+                                    <button type="button"  class="btn btn-warning " id="resume" rideId="${fride.id}" >Resume</button>
+                                <%--<button type="button"  class="btn btn-success " id="start" rideId="${fride.id}" >Start</button>--%>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </c:forEach>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride Five</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " >Pause</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Ride Six</a>
-                            </h4>
-                            <h5>50 Members</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-default " >Join</button>
-                            <button type="button"  class="btn btn-danger " >Pause</button>
-                        </div>
-                    </div>
-                </div>
 
             </div>
             <!-- /.row -->
@@ -265,6 +251,7 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+<script src="js/homepage.js"></script>
 </body>
 
 </html>
