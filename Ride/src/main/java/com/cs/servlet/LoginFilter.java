@@ -32,22 +32,23 @@ public class LoginFilter implements Filter {
         //登录的Servlet对应的url
         String loginServlet = "/user?action=login";
         HttpSession session = request.getSession(false);
-        //放行js,css,jpeg,gif
-        String [] staticContent = {".js",".css",".gif",".jpeg","jpg"};
-        for (int i = 0; i < staticContent.length; i++) {
-            if(targetURL.endsWith(staticContent[i])){
-                chain.doFilter(request, response);
-                return;
-            }
-        }
         //对当前页面进行判断，如果当前页面不为登录页面
         if(loginPage.equals(targetURL)){
             //这里表示如果当前页面是登陆页面，跳转到登陆页面
             chain.doFilter(request, response);
-            return;
 
         }else if(registerPage.equals(targetURL)){
             //这里表示如果当前页面是注册页面，跳转到注册页面
+            chain.doFilter(request, response);
+        }else if(targetURL.endsWith(".txt")||
+                targetURL.endsWith(".js")||
+                targetURL.endsWith(".css")||
+                targetURL.endsWith(".png")||
+                targetURL.endsWith(".jpg")||
+                targetURL.endsWith(".jpeg")||
+                targetURL.endsWith(".bmp")
+                ){
+            //这里表示如果是静态资源，可以访问
             chain.doFilter(request, response);
             return;
         } else{
