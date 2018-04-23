@@ -8,35 +8,36 @@
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Login</title>
+    <title>Create ride</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
 </head>
 <body>
 <div id="app" >
-    <form class="login-container" action="login" method="post">
-        <h3 class="title">Login</h3>
+    <form class="login-container" action="create" method="post">
+        <h3 class="title">Create Ride</h3>
         <div class="item">
-            <label >
-                <input name="username" class="input" type="text"  placeholder="User name">
+            <label >route name
+                <input name="route" class="input" type="text"  placeholder="User name">
+            </label>
+        </div>
+        <div class="item">
+            <label >begindate
+                <input name="begindate" class="input" type="date"  >
+            </label>
+        </div>
+        <div class="item">
+            <label >cover image
+                <input   type="file" value="Login">
             </label>
         </div>
         <div class="item">
             <label >
-                <input name="password" class="input" type="password"  placeholder="密码">
+                <input class="submit"   value="Create">
             </label>
         </div>
-        <div class="item">
-            <label >
-                <input class="submit"  type="submit" value="Login">
-            </label>
-        </div>
-        <div class="item">
-            <label >
-                <span class="reglink">Dont' have a account? <a href="register.jsp" class="link">Sign up</a> </span>
-            </label>
-        </div>
+
     </form>
 </div>
 <script src="js/jquery.min.js"></script>
