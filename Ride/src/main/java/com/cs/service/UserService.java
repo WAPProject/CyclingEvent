@@ -14,6 +14,7 @@ public class UserService {
     public User addUser(User user){
         SqlSession session = MybatisUtil.getSqlSession();
         session.getMapper(UserMapper.class).addUser(user);
+        session.commit();
         MybatisUtil.closeSqlSession();
         return user;
 
@@ -21,12 +22,14 @@ public class UserService {
     public User checkLogin(User user){
         SqlSession session = MybatisUtil.getSqlSession();
         User result = session.getMapper(UserMapper.class).checkLogin(user);
+        session.commit();
         MybatisUtil.closeSqlSession();
         return result;
     }
     public User getUserById(int id){
         SqlSession session = MybatisUtil.getSqlSession();
         User result = session.getMapper(UserMapper.class).getUserById(id);
+        session.commit();
         MybatisUtil.closeSqlSession();
         return result;
     }
