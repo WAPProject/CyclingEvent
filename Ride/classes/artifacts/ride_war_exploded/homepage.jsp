@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
-
+g
 <head>
 
     <meta charset="utf-8">
@@ -30,6 +30,9 @@
 <body>
 
 <!-- Navigation -->
+<%----%>
+<%--bigdragon--%>
+<%----%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="createRide">Create a ride</a>
