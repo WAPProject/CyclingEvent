@@ -27,6 +27,8 @@ public class LoginFilter implements Filter {
         System.out.println("targetURL:"+targetURL);
         //登录页面
         String loginPage = "/login.jsp";
+        //注册页面
+        String registerPage = "/register.jsp";
         //登录的Servlet对应的url
         String loginServlet = "/user?action=login";
         HttpSession session = request.getSession(false);
@@ -35,7 +37,10 @@ public class LoginFilter implements Filter {
             //这里表示如果当前页面是登陆页面，跳转到登陆页面
             chain.doFilter(request, response);
 
-        }else{
+        }else if(registerPage.equals(targetURL)){
+            //这里表示如果当前页面是登陆页面，跳转到登陆页面
+            chain.doFilter(request, response);
+        } else{
             if(loginServlet.equals(targetURL)){
                 //Servlet验证
                 chain.doFilter(request, response);
