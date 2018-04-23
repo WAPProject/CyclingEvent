@@ -33,7 +33,7 @@ public class LoginFilter implements Filter {
         String loginServlet = "/user?action=login";
         HttpSession session = request.getSession(false);
         //对当前页面进行判断，如果当前页面不为登录页面
-        if(loginPage.equals(targetURL)){
+        if(loginPage.equals(targetURL) || "/user".equalsIgnoreCase(targetURL)){
             //这里表示如果当前页面是登陆页面，跳转到登陆页面
             chain.doFilter(request, response);
 

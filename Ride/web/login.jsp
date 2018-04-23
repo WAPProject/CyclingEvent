@@ -15,7 +15,7 @@
 </head>
 <body>
 <div id="app" >
-    <form class="login-container" action="login" method="post">
+    <form class="login-container" action="${pageContext.request.contextPath}/user?action=login" method="post">
         <h3 class="title">Login</h3>
         <div class="item">
             <label >
