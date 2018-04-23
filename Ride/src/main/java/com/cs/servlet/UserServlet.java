@@ -67,6 +67,7 @@ public class UserServlet extends HttpServlet {
         user.setName(name);
         user.setPassword(password);
         user.setId(null);
+        System.out.println("username:"+user.getUsername()+",emailaddress:"+user.getEmail());
         userService.addUser(user);
         resp.sendRedirect(req.getContextPath() + "/login.jsp");
     }

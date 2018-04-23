@@ -16,6 +16,12 @@
 <div id="app" >
     <form class="login-container" action="user?action=add" method="post">
         <h3 class="title">Register</h3>
+
+        <div class="item">
+            <label >
+                <input name="name" class="input" type="text"  placeholder="Real Name">
+            </label>
+        </div>
         <div class="item">
             <label >
                 <input name="username" class="input" type="text"  placeholder="User name">
@@ -23,7 +29,7 @@
         </div>
         <div class="item">
             <label >
-                <input name="emailaddress" class="input" type="text"  placeholder="Email address">
+                <input name="email" class="input" type="text"  placeholder="Email address">
             </label>
         </div>
         <div class="item">
