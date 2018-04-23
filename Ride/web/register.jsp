@@ -18,12 +18,18 @@
         <h3 class="title">Register</h3>
         <div class="item">
             <label >
-                <input name="username" class="input" type="text"  placeholder="User name">
+                <input name="name" class="input" type="text"  placeholder="real name">
             </label>
         </div>
         <div class="item">
             <label >
-                <input name="emailaddress" class="input" type="text"  placeholder="Email address">
+                <input name="username" class="input" type="text"  placeholder="User name">
+            </label>
+        </div>
+        ÷
+        <div class="item">
+            <label >
+                <input name="email" class="input" type="text"  placeholder="Email address">
             </label>
         </div>
         <div class="item">
