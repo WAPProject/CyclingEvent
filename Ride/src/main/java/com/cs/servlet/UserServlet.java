@@ -30,6 +30,8 @@ public class UserServlet extends HttpServlet {
         }else if("logout".equalsIgnoreCase(action)){
             req.getSession().invalidate();
             resp.sendRedirect(req.getContextPath() + "login.jsp");
+        }else if("goregister".equalsIgnoreCase(action)){
+            resp.sendRedirect(req.getContextPath() + "/register.jsp");
         }
     }
 
