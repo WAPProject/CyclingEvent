@@ -32,19 +32,29 @@ public class LoginFilter implements Filter {
         //登录的Servlet对应的url
         String loginServlet = "/user?action=login";
         HttpSession session = request.getSession(false);
+        //放行js,css,jpeg,gif
+        String [] staticContent = {".js",".css",".gif",".jpeg","jpg"};
+        for (int i = 0; i < staticContent.length; i++) {
+            if(targetURL.endsWith(staticContent[i])){
+                chain.doFilter(request, response);
+                return;
+            }
+        }
         //对当前页面进行判断，如果当前页面不为登录页面
         if(loginPage.equals(targetURL)){
             //这里表示如果当前页面是登陆页面，跳转到登陆页面
             chain.doFilter(request, response);
+            return;
 
         }else if(registerPage.equals(targetURL)){
             //这里表示如果当前页面是注册页面，跳转到注册页面
             chain.doFilter(request, response);
+            return;
         } else{
             if(loginServlet.equals(targetURL)){
                 //Servlet验证
                 chain.doFilter(request, response);
-
+                return;
             }else{
                 //在不为登陆页面时，再进行判断，如果不是登陆页面也没有session则跳转到登录页面，
                 if(session == null || session.getAttribute(UserServlet.USERSESSION) == null ){
@@ -54,7 +64,7 @@ public class LoginFilter implements Filter {
                 }else{
                     //这里表示正确，会去寻找下一个链，如果不存在，则进行正常的页面跳转
                     chain.doFilter(request, response);
-
+                    return;
                 }
             }
         }
