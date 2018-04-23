@@ -68,7 +68,10 @@ public class RideServlet extends HttpServlet {
             String rideId = req.getParameter("id");
             rideService.updateStatus(rideId, INPROCESSING);
             resp.sendRedirect(req.getContextPath() + "/ride?action=homepage");
+        } else if("create".equalsIgnoreCase(action)){
+            req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
         }
+
     }
 
 

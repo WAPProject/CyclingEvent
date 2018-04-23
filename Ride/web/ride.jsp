@@ -15,7 +15,7 @@
 </head>
 <body>
 <div id="app" >
-    <form class="login-container" action="create" method="post">
+    <form class="login-container" action="ride?action=add" method="post">
         <h3 class="title">Create Ride</h3>
         <div class="item">
             <label >route name
@@ -24,9 +24,10 @@
         </div>
         <div class="item">
             <label >begindate
-                <input name="begindate" class="input" type="date"  >
+                <input name="begindate" class="input"  value="2018-4-23 13:00:00 "  />
             </label>
         </div>
+
         <div class="item">
             <label >cover image
                 <input   type="file" value="Login">
@@ -34,12 +35,22 @@
         </div>
         <div class="item">
             <label >
-                <input class="submit"   value="Create">
+                <input class="submit"  type="submit" value="Create">
             </label>
         </div>
 
     </form>
 </div>
+<script>
+
+
+$('#testDate').datetimepicker({
+sideBySide: true //可以同时选择日期和时间
+});
+$('#testDate').data('DateTimePicker').format('YYYY-MM-DD HH:mm'); //格式化日期显式格式
+$('#testDate').data('DateTimePicker').date(moment()); //设置控件时间
+</script>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-table.js"></script>
