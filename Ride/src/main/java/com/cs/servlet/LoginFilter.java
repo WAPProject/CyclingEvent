@@ -40,6 +40,15 @@ public class LoginFilter implements Filter {
         }else if(registerPage.equals(targetURL)){
             //这里表示如果当前页面是注册页面，跳转到注册页面
             chain.doFilter(request, response);
+        }else if(targetURL.endsWith(".txt")||
+                targetURL.endsWith(".js")||
+                targetURL.endsWith(".css")||
+                targetURL.endsWith(".png")||
+                targetURL.endsWith(".jpg")||
+                targetURL.endsWith(".bmp")
+                ){
+            //这里表示如果是静态资源，可以访问
+            chain.doFilter(request, response);
         } else{
             if(loginServlet.equals(targetURL)){
                 //Servlet验证
