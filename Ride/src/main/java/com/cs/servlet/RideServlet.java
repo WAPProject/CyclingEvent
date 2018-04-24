@@ -13,9 +13,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.json.simple.*;
+
 
 /**
  * @Author:Yanlong Wang
@@ -81,6 +84,23 @@ public class RideServlet extends HttpServlet {
             req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
         } else if ("create".equalsIgnoreCase(action)) {
             req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
+        } else if ("rideusers".equalsIgnoreCase(action)) {
+            PrintWriter out = resp.getWriter();
+            String rideId = req.getParameter("id");
+            List<User> userList = rideService.listPaticipant(rideId);
+            //json object
+            JSONObject[] results = new JSONObject[userList.size()];
+            int i = 0;
+            for(User user: userList){
+                JSONObject json = new JSONObject();
+                json.put("name",user.getName());
+                json.put("username",user.getUsername());
+                json.put("email",user.getEmail());
+                json.put("id",user.getId());
+                results[i++] = json;
+            }
+            out.print(Arrays.toString(results));
+            out.flush();
         }
         else if ("message".equalsIgnoreCase(action)) {
             List<Message> msgList = rideService.listFlagUserAndMsg("asc");
@@ -91,6 +111,11 @@ public class RideServlet extends HttpServlet {
             System.out.println(json);
             resp.getWriter().print(json);
             resp.flushBuffer();
+        }else if("showmessage".equalsIgnoreCase(action)){
+            List<Message> msgList = rideService.listFlagUserAndMsg("asc");
+            msgList = msgList.stream().filter(message -> Arrays.stream(message.getPaticipantids().split(",")).anyMatch(id -> id.equalsIgnoreCase((String) req.getSession().getAttribute(UserServlet.USERID)))).collect(Collectors.toList());
+            req.setAttribute("msglist", msgList);//flag message
+            req.getRequestDispatcher(req.getContextPath() + "/showmessage.jsp").forward(req, resp);
         }
 
     }
