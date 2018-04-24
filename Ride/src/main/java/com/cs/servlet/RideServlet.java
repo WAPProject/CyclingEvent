@@ -55,6 +55,7 @@ public class RideServlet extends HttpServlet {
         } else if ("listpaticipants".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
             List<User> userList = rideService.listPaticipant(rideId);
+            req.setAttribute("userList",userList);
             req.getRequestDispatcher(req.getContextPath() + "/listpaticipants.jsp").forward(req, resp);
         } else if ("end".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
@@ -68,12 +69,20 @@ public class RideServlet extends HttpServlet {
             String rideId = req.getParameter("id");
             rideService.updateStatus(rideId, INPROCESSING);
             resp.sendRedirect(req.getContextPath() + "/ride?action=homepage");
+        } else if("gorideinfo".equalsIgnoreCase(action)){
+
+            String rideId = req.getParameter("id");
+            Ride ride = rideService.getRide(rideId);
+            req.setAttribute("route", ride.getRoute());
+            req.setAttribute("status", ride.getStatus());
+            req.setAttribute("location", ride.getCurrentLocation());
+            req.setAttribute("begindate", ride.getBegindate());
+            req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
         } else if("create".equalsIgnoreCase(action)){
             req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
         }
 
     }
-
 
     /**
      * @Author:Yanlong

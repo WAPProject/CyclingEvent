@@ -81,7 +81,7 @@
 
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="user?action=logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -97,7 +97,7 @@
 
             <h1 class="my-4"></h1>
             <div class="list-group">
-                <a href="#" class="list-group-item OutgoingBtn" >Outgoing</a>
+                <a href="#" class="list-group-item OutgoingBtn" >Ongoing</a>
                 <a href="#" class="list-group-item FlagBtn">Flag</a>
                 <a href="#" class="list-group-item UpcommingBtn">Upcomming</a>
             </div>
@@ -135,18 +135,38 @@
             </div>
 
             <div class="row">
+                <c:forEach varStatus="status" items="${notstart}" var="ride" >
+                    <div class="col-lg-4 col-md-6 mb-4 notstart">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
+                                </h4>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <p class="card-text">${ride.route}</p>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button"  class="btn btn-warning " rideId="${ride.id}" id="join">join</button>
+                                <c:if test="${ride.creatorUserId eq currentuserid}">
+                                <button type="button"  class="btn btn-success " rideId="${ride.id}" id="start">Start</button>
+                                </c:if>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
 
 
-            <c:forEach var="ride"  items="${inprocessing}" >
+            <c:forEach var="ride"  items="${inprocessing}" varStatus="status">
                 <div class="col-lg-4 col-md-6 mb-4 inprocessing">
                     <div class="card h-100">
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">${ride.route}</a>
+                                <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
                             </h4>
-                            <h5>${ride.route}</h5>
-                            <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
+                            <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                            <p class="card-text">${ride.route}</p>
                         </div>
                         <div class="card-footer">
                             <button type="button"  class="btn btn-default " rideId="${ride.id}"  id="join" >Join</button>
@@ -159,41 +179,16 @@
                 </div>
             </c:forEach>
 
-                <c:forEach var="wride"  items="${notstart}" >
-
-
-                    <div class="col-lg-4 col-md-6 mb-4 notstart">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="#">${wride.route}</a>
-                                </h4>
-                                <h5>${wride.route}</h5>
-                                    <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
-                            </div>
-                            <div class="card-footer">
-                                <%--<button type="button"  class="btn btn-default " >Join</button>--%>
-                                <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
-                                    <%--<button type="button"  class="btn btn-warning " >Resume</button>--%>
-                                    <button type="button"  class="btn btn-success " id="start" rideId="${wride.id}" >Start</button>
-                            </div>
-                        </div>
-                    </div>
-                </c:forEach>
-
-                <c:forEach var="fride"  items="${flag}" >
-
-
+                <c:forEach var="fride"  items="${flag}" varStatus="status">
                     <div class="col-lg-4 col-md-6 mb-4 flag">
                         <div class="card h-100">
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">${fride.route}</a>
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
                                 </h4>
-                                <h5>${fride.route}</h5>
-                                    <%--<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>--%>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <p class="card-text">${ride.route}</p>
                             </div>
                             <div class="card-footer">
                                     <%--<button type="button"  class="btn btn-default " >Join</button>--%>
