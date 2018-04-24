@@ -12,17 +12,12 @@ $(function(){
         return(localhostPaht+projectName);
     }
     $.ajax({
-       url : "/ride",
-        data : {"action": "rideusers","id":10},
-
-        //    data : {"action": "rideusers","id":window.location.search.split("=").slice(-1)[0]},
-       type : "GET",
-       dataType : "json",
-       success : function(result) {
-           //uselist
-            console.log("get the ride userlist",result)
+        url : "/ride",
+        data : {"action": "rideusers","id":window.location.search.split("=").slice(-1)[0]},
+        type : "GET",
+        dataType : "json",
+        success : function(result) {
             var tablebody = $("#ridinfousers");
-          // ridinfousers
             for (var i = 0; i < result.length; i++) {
                 console.log(result[i].name);
                 var user = result[i];
@@ -35,6 +30,6 @@ $(function(){
                 $tr.append('</tr>');
                 tablebody.append($tr);
             }
-       }
+        }
     });
 })
