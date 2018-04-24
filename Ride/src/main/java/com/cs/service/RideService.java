@@ -29,6 +29,12 @@ public class RideService {
         return ride;
     }
 
+    public Ride getRide(String rideid){
+        SqlSession session = MybatisUtil.getSqlSession();
+        Ride ride = session.getMapper(RideMapper.class).getRideById(rideid);
+        MybatisUtil.closeSqlSession();
+        return ride;
+    }
     public void updateStatus(String id, String status){
         SqlSession session = MybatisUtil.getSqlSession();
         session.getMapper(RideMapper.class).updateStatus(id,status);

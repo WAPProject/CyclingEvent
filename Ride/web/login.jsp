@@ -34,7 +34,7 @@
         </div>
         <div class="item">
             <label >
-                <span class="reglink">Dont' have a account? <a href="${pageContext.request.contextPath}/user?action=goregister" class="link">Sign up</a> </span>
+                <span class="reglink">Dont' have a account? <a href="register.jsp" class="link">Sign up</a> </span>
             </label>
         </div>
     </form>

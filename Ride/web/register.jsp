@@ -7,11 +7,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
 <head>
     <title>Register</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
+
 <body>
 <div id="app" >
     <form class="login-container" action="user?action=add" method="post">
@@ -44,11 +46,13 @@
         </div>
     </form>
 </div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-table.js"></script>
 <script src="js/bootstrap-datetimepicker.min.js"></script>
 <script src="js/vue.js"></script>
 <script src="js/app.js"></script>
+
 </body>
 </html>

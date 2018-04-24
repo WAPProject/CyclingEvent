@@ -28,6 +28,14 @@ public interface RideMapper {
 	 */
 	@Insert("insert into ride values (null,#{route},#{creatorUserId},#{status},#{currentLocation},#{begindate})")
 	public void addRide(Ride ride);
+
+	/**
+	 * @param rideid
+	 * @Description: get rideinfo
+	 */
+	@Select("select * from ride where id=#{id}")
+	public Ride getRideById(@Param("id")String id);
+
 	/**
 	*@Author:Yanlong
 	*@Date:4/22/2018_11:44 PM

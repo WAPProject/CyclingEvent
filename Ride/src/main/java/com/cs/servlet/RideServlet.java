@@ -68,9 +68,19 @@ public class RideServlet extends HttpServlet {
             String rideId = req.getParameter("id");
             rideService.updateStatus(rideId, INPROCESSING);
             resp.sendRedirect(req.getContextPath() + "/ride?action=homepage");
+        } else if("gorideinfo".equalsIgnoreCase(action)){
+
+            String rideId = req.getParameter("id");
+            // this is used for debuging, need remove this code,when the data ready
+            rideId = "1";
+            Ride ride = rideService.getRide(rideId);
+            req.setAttribute("route", ride.getRoute());
+            req.setAttribute("status", ride.getStatus());
+            req.setAttribute("location", ride.getCurrentLocation());
+            req.setAttribute("begindate", ride.getBegindate());
+            req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
         }
     }
-
 
     /**
      * @Author:Yanlong
