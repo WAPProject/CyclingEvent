@@ -8,10 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c753eb10-dfce-414f-9872-96df18e127ec" name="Default" comment="Merge branch 'master' of https://github.com/WAPProject/CyclingEvent&#10;&#10;# Conflicts:&#10;#&#9;Ride/web/homepage.jsp">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/service/RideService.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/service/RideService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/homepage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cs/service/RideService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cs/service/RideService.class" afterDir="false" />
     </list>
     <ignored path="ride.iws" />
@@ -76,8 +73,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+            <state relative-caret-position="1161">
+              <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -366,7 +363,13 @@
             <path>
               <item name="ride" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ride" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -989,7 +992,7 @@
       <workItem from="1524495443788" duration="8195000" />
       <workItem from="1524503769639" duration="4637000" />
       <workItem from="1524510431769" duration="3751000" />
-      <workItem from="1524521425468" duration="9063000" />
+      <workItem from="1524521425468" duration="9359000" />
     </task>
     <task id="LOCAL-00001" summary="commit local">
       <created>1524499061667</created>
@@ -1068,7 +1071,28 @@
       <option name="project" value="LOCAL" />
       <updated>1524530330272</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/WAPProject/CyclingEvent&#10;&#10;# Conflicts:&#10;#&#9;Ride/web/homepage.jsp">
+      <created>1524530736892</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1524530736892</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' of https://github.com/WAPProject/CyclingEvent&#10;&#10;# Conflicts:&#10;#&#9;Ride/web/homepage.jsp">
+      <created>1524530802453</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524530802453</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'master' of https://github.com/WAPProject/CyclingEvent&#10;&#10;# Conflicts:&#10;#&#9;Ride/web/homepage.jsp">
+      <created>1524530838233</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1524530838233</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1077,11 +1101,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27835000" />
+    <option name="totallyTimeSpent" value="28131000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -1523,8 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        <state relative-caret-position="1161">
+          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
         </state>
       </provider>
     </entry>
