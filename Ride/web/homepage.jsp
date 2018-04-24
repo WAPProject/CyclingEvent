@@ -139,7 +139,7 @@
                 <c:forEach varStatus="status" items="${notstart}" var="ride" >
                     <div class="col-lg-4 col-md-6 mb-4 notstart">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
@@ -148,9 +148,9 @@
                                 <p class="card-text">${ride.route}</p>
                             </div>
                             <div class="card-footer">
-                                <button type="button"  class="btn btn-warning " rideId="${ride.id}" id="join">join</button>
+                                <button type="button"  class="btn btn-warning join" rideId="${ride.id}" >join</button>
                                 <c:if test="${ride.creatorUserId eq currentuserid}">
-                                <button type="button"  class="btn btn-success " rideId="${ride.id}" id="start">Start</button>
+                                <button type="button"  class="btn btn-success start" rideId="${ride.id}" >Start</button>
                                 </c:if>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
             <c:forEach var="ride"  items="${inprocessing}" varStatus="status">
                 <div class="col-lg-4 col-md-6 mb-4 inprocessing">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
@@ -170,20 +170,20 @@
                             <p class="card-text">${ride.route}</p>
                         </div>
                         <div class="card-footer">
-                            <button type="button"  class="btn btn-default " rideId="${ride.id}"  id="join" >Join</button>
+                            <button type="button"  class="btn btn-default join" rideId="${ride.id}"  >Join</button>
                             <%--<button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause" data-toggle="modal" data-target="#myModal" >Pause</button>--%>
-                            <button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause"  >Pause</button>
-                            <button type="button"  class="btn btn-warning" id="endRide"   rideId="${ride.id}" >End</button>
+                            <button type="button"  class="btn btn-danger pause" rideId="${ride.id}"    >Pause</button>
+                            <button type="button"  class="btn btn-warning endRide"    rideId="${ride.id}" >End</button>
                             <%--<button type="button"  class="btn btn-success " >Start</button>--%>
                         </div>
                     </div>
                 </div>
             </c:forEach>
 
-                <c:forEach var="fride"  items="${flag}" varStatus="status">
+                <c:forEach var="ride"  items="${flag}" varStatus="status">
                     <div class="col-lg-4 col-md-6 mb-4 flag">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
@@ -194,7 +194,7 @@
                             <div class="card-footer">
                                     <%--<button type="button"  class="btn btn-default " >Join</button>--%>
                                     <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
-                                    <button type="button"  class="btn btn-warning " id="resume" rideId="${fride.id}" >Resume</button>
+                                    <button type="button"  class="btn btn-warning resume"  rideId="${ride.id}" >Resume</button>
                                 <%--<button type="button"  class="btn btn-success " id="start" rideId="${fride.id}" >Start</button>--%>
                             </div>
                         </div>

@@ -30,12 +30,11 @@
             </label>
         </div>
 
-        <%--<div class="item">--%>
-            <%--<label >cover image--%>
-                <%--<input   type="file"  name="banner" >--%>
-                <%--&lt;%&ndash;<input type="hidden" name="banner" id="banner" />&ndash;%&gt;--%>
-            <%--</label>--%>
-        <%--</div>--%>
+        <div class="item">
+            <label >cover image
+                <input  type="text"  name="banner"  >
+            </label>
+        </div>
 
         <div class="item">
             <label >

@@ -38,36 +38,27 @@ $(function(){
 
 
 
-    $("#start").click(function(){
+    $(".start").click(function(){
         const id = $(this).attr("rideId");
         window.location.href=getRootPath()+"/ride?action=start&id="+id;
-        //$.ajax({
-        //    url : "<%=path%>/ride",
-        //    data : {"action": "start","id":id},
-        //    type : "POST",
-        //    dataType : "json",
-        //    success : function(result) {
-        //
-        //    }
-        //});
     });
 
-    $("#join").click(function(){
+    $(".join").click(function(){
         const id = $(this).attr("rideId");
         window.location.href=getRootPath()+"/ride?action=join&id="+id;
     });
 
-    $("#pause").click(function(){
+    $(".pause").click(function(){
         const id = $(this).attr("rideId");
         window.location.href=getRootPath()+"/ride?action=flag&id="+id;
     });
 
-    $("#resume").click(function(){
+    $(".resume").click(function(){
         const id = $(this).attr("rideId");
         window.location.href=getRootPath()+"/ride?action=unflag&id="+id;
     });
 
-    $("#endRide").click(function(){
+    $(".endRide").click(function(){
         const id = $(this).attr("rideId");
         window.location.href=getRootPath()+"/ride?action=end&id="+id;
     });

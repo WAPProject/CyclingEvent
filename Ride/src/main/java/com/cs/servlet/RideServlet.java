@@ -81,7 +81,8 @@ public class RideServlet extends HttpServlet {
             req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
         } else if ("create".equalsIgnoreCase(action)) {
             req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
-        } else if ("message".equalsIgnoreCase(action)) {
+        }
+        else if ("message".equalsIgnoreCase(action)) {
             List<Message> msgList = rideService.listFlagUserAndMsg("asc");
             msgList = msgList.stream().filter(message -> Arrays.stream(message.getPaticipantids().split(",")).anyMatch(id -> id.equalsIgnoreCase((String) req.getSession().getAttribute(UserServlet.USERID)))).collect(Collectors.toList());
 
@@ -102,11 +103,12 @@ public class RideServlet extends HttpServlet {
     private void addRide(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String route = req.getParameter("route");
         String begindate = req.getParameter("begindate");
+        String banner =req.getParameter("banner");
         Ride ride = new Ride();
         ride.setStatus(NOTSTART);
         ride.setCreatorUserId((String) req.getSession().getAttribute(UserServlet.USERID));
         ride.setBegindate(DateUtil.getDate(begindate, null));
-        ride.setBanner("");
+        ride.setBanner(banner);
         ride.setRoute(route);
         ride.setId(null);
         ride.setCurrentLocation(null);
