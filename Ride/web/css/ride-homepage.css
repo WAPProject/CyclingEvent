@@ -7,7 +7,7 @@
 body {
   padding-top: 54px;
 }
-img:not(#lunbo){
+img:not(.lunbo){
   width : 100%;
   height: 200px;
 }
