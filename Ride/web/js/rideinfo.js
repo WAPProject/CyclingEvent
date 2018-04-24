@@ -11,12 +11,18 @@ $(function(){
         var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
         return(localhostPaht+projectName);
     }
-    $.ajax({
-        url : "/ride",
-        data : {"action": "rideusers","id":window.location.search.split("=").slice(-1)[0]},
+
+
+
+   // console.log(window.location.href=getRootPath()+"/ride?action=rideusers&id="+$("#ridinfousers").attr("rideid"));
+
+        $.ajax({
+        url : getRootPath()+"/ride",
+        data : {"action": "rideusers","id":$("#ridinfousers").attr("rideid")},
         type : "GET",
         dataType : "json",
         success : function(result) {
+
             var tablebody = $("#ridinfousers");
             for (var i = 0; i < result.length; i++) {
                 console.log(result[i].name);

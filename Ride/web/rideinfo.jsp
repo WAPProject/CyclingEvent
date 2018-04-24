@@ -52,7 +52,9 @@
 
 <div class="container">
 
-    <div id="app" >
+    <div id="app">
+
+
         <div class="item">
             <label >
                 <span >Route: <%= request.getAttribute("route")%></span>
@@ -84,7 +86,7 @@
         <th>Email</th>
     </tr>
     </thead>
-    <tbody  id="ridinfousers">
+    <tbody  id="ridinfousers" rideid="${id}">
 
     </tbody>
 </table>

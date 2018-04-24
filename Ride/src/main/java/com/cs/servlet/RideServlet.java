@@ -77,6 +77,7 @@ public class RideServlet extends HttpServlet {
         } else if ("gorideinfo".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
             Ride ride = rideService.getRide(rideId);
+            req.setAttribute("id", ride.getId());
             req.setAttribute("route", ride.getRoute());
             req.setAttribute("status", ride.getStatus());
             req.setAttribute("location", ride.getCurrentLocation());
@@ -88,6 +89,7 @@ public class RideServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             String rideId = req.getParameter("id");
             List<User> userList = rideService.listPaticipant(rideId);
+            System.out.println("userlist:"+userList);
             JSONObject[] results = new JSONObject[userList.size()];
             int i = 0;
             for(User user: userList){
@@ -98,8 +100,8 @@ public class RideServlet extends HttpServlet {
                 json.put("id",user.getId());
                 results[i++] = json;
             }
-            out.print(Arrays.toString(results));
-            out.flush();
+            resp.getWriter().print(Arrays.toString(results));
+            resp.flushBuffer();
         }
         else if ("message".equalsIgnoreCase(action)) {
             List<Message> msgList = rideService.listFlagUserAndMsg("asc");

@@ -1,8 +1,0 @@
-Ride/target/classes/*
-Ride/target/*
-*.class
-*.iml
-*/*.iml
-
-.idea/
-*/.idea/
