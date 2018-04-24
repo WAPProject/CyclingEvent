@@ -115,14 +115,15 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
+
                     <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/27/1524598055200.jpg" height="321" width="825"  alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/35/1524598538109.jpg" height="321" width="825"  alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/31/1524598297500.jpg" height="321" width="825"  alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -139,7 +140,7 @@
                 <c:forEach varStatus="status" items="${notstart}" var="ride" >
                     <div class="col-lg-4 col-md-6 mb-4 notstart">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" height="144" width="253"  alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
@@ -161,7 +162,7 @@
             <c:forEach var="ride"  items="${inprocessing}" varStatus="status">
                 <div class="col-lg-4 col-md-6 mb-4 inprocessing">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
+                        <a href="#"><img class="card-img-top" src="${ride.banner}" height="144" width="253"    alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
@@ -183,7 +184,7 @@
                 <c:forEach var="ride"  items="${flag}" varStatus="status">
                     <div class="col-lg-4 col-md-6 mb-4 flag">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" height="144" width="253"    alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
