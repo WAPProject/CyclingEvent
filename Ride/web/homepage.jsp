@@ -76,6 +76,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
+                        <span id="envelope"></span>
                     </a>
                 </li>
 

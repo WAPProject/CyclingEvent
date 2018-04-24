@@ -30,7 +30,7 @@ public interface RideMapper {
 	public void addRide(Ride ride);
 
 	/**
-	 * @param rideid
+	 * @param id
 	 * @Description: get rideinfo
 	 */
 	@Select("select * from ride where id=#{id}")

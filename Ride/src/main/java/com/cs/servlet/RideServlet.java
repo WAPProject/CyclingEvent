@@ -5,6 +5,7 @@ import com.cs.entity.Ride;
 import com.cs.entity.User;
 import com.cs.service.RideService;
 import com.cs.util.DateUtil;
+import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -55,7 +56,7 @@ public class RideServlet extends HttpServlet {
         } else if ("listpaticipants".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
             List<User> userList = rideService.listPaticipant(rideId);
-            req.setAttribute("userList",userList);
+            req.setAttribute("userList", userList);
             req.getRequestDispatcher(req.getContextPath() + "/listpaticipants.jsp").forward(req, resp);
         } else if ("end".equalsIgnoreCase(action)) {
             String rideId = req.getParameter("id");
@@ -69,7 +70,7 @@ public class RideServlet extends HttpServlet {
             String rideId = req.getParameter("id");
             rideService.updateStatus(rideId, INPROCESSING);
             resp.sendRedirect(req.getContextPath() + "/ride?action=homepage");
-        } else if("gorideinfo".equalsIgnoreCase(action)){
+        } else if ("gorideinfo".equalsIgnoreCase(action)) {
 
             String rideId = req.getParameter("id");
             Ride ride = rideService.getRide(rideId);
@@ -78,8 +79,17 @@ public class RideServlet extends HttpServlet {
             req.setAttribute("location", ride.getCurrentLocation());
             req.setAttribute("begindate", ride.getBegindate());
             req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
-        } else if("create".equalsIgnoreCase(action)){
+        } else if ("create".equalsIgnoreCase(action)) {
             req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
+        } else if ("message".equalsIgnoreCase(action)) {
+            List<Message> msgList = rideService.listFlagUserAndMsg("asc");
+            msgList = msgList.stream().filter(message -> Arrays.stream(message.getPaticipantids().split(",")).anyMatch(id -> id.equalsIgnoreCase((String) req.getSession().getAttribute(UserServlet.USERID)))).collect(Collectors.toList());
+
+            Gson gson = new Gson();
+            String json = gson.toJson(msgList);
+            System.out.println(json);
+            resp.getWriter().print(json);
+            resp.flushBuffer();
         }
 
     }
