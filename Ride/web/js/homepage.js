@@ -73,6 +73,15 @@ $(function(){
     });
 
 
+    setInterval(function(){
+        $.get(getRootPath()+'/ride?action=message').done(function(o){
+            console.log(o);
+            let obj = JSON.parse(o);
+            console.log(typeof obj);
+            let msgArray = o.msglist;
+            $('#envelope').html(msgArray.length);
+        })
 
+    },20000);
 
 })
