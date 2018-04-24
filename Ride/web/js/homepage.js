@@ -12,7 +12,7 @@ $(function(){
         return(localhostPaht+projectName);
     }
 
-
+    //
     $(".notstart").hide();
     $(".inprocessing").show();
     $(".flag").hide();
