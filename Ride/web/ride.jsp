@@ -21,18 +21,18 @@
         <h3 class="title">Create Ride</h3>
         <div class="item">
             <label >route name
-                <input name="route" class="input" type="text"  placeholder="User name">
+                <input name="route" class="input" type="text"  required="true" placeholder="Ride name">
             </label>
         </div>
         <div class="item">
             <label >begindate
-                <input name="begindate" class="input"  value="2018-4-23 13:00:00"  />
+                <input name="begindate" class="input"  type = "date" required="true"  />
             </label>
         </div>
 
         <div class="item">
             <label >cover image
-                <input  type="text"  name="banner"  >
+                <input  type="text"  name="banner"  required="true" >
             </label>
         </div>
 

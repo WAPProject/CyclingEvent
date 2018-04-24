@@ -117,13 +117,13 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="carousel-item active">
-                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/27/1524598055200.jpg" height="321" width="825"  alt="First slide">
+                        <img class="d-block img-fluid" src="http://albert6.com:9999/uploadface/images/1804/24/15/27/1524598055200.jpg" height="400" width="825"  alt="First slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/35/1524598538109.jpg" height="321" width="825"  alt="Second slide">
+                        <img class="d-block img-fluid" src="http://albert6.com:9999/uploadface/images/1804/24/15/35/1524598538109.jpg" height="400" width="825"  alt="Second slide">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block" src="http://albert6.com:9999/uploadface/images/1804/24/15/31/1524598297500.jpg" height="321" width="825"  alt="Third slide">
+                        <img class="d-block img-fluid" src="http://albert6.com:9999/uploadface/images/1804/24/15/31/1524598297500.jpg" height="400" width="825"  alt="Third slide">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

@@ -6,6 +6,7 @@ import com.cs.entity.User;
 import com.cs.service.RideService;
 import com.cs.util.DateUtil;
 import com.google.gson.Gson;
+import org.json.simple.JSONObject;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,7 +18,6 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.json.simple.*;
 
 
 /**
@@ -132,7 +132,7 @@ public class RideServlet extends HttpServlet {
         Ride ride = new Ride();
         ride.setStatus(NOTSTART);
         ride.setCreatorUserId((String) req.getSession().getAttribute(UserServlet.USERID));
-        ride.setBegindate(DateUtil.getDate(begindate, null));
+        ride.setBegindate(DateUtil.getDate(begindate+" 00:00:00", null));
         ride.setBanner(banner);
         ride.setRoute(route);
         ride.setId(null);

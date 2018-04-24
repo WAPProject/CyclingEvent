@@ -17,7 +17,7 @@ import java.util.List;
 public class RideService {
     public List<Ride> listRideByStatus(String status, String order){
         SqlSession session = MybatisUtil.getSqlSession();
-        List<Ride>rideList = session.getMapper(RideMapper.class).listRideByStatus(status,"asc");
+        List<Ride>rideList = session.getMapper(RideMapper.class).listRideByStatus(status,order);
         session.commit();
         MybatisUtil.closeSqlSession();
         return rideList;
