@@ -141,9 +141,9 @@
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">Ride ${status.count}</a>
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
                                 </h4>
-                                <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}" target="_blank">See Members</a></h5>
                                 <p class="card-text">${ride.route}</p>
                             </div>
                             <div class="card-footer">
@@ -163,7 +163,7 @@
                         <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">Ride ${status.count}</a>
+                                <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
                             </h4>
                             <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
                             <p class="card-text">${ride.route}</p>
@@ -180,14 +180,12 @@
             </c:forEach>
 
                 <c:forEach var="fride"  items="${flag}" varStatus="status">
-
-
                     <div class="col-lg-4 col-md-6 mb-4 flag">
                         <div class="card h-100">
                             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="#">${status.count}</a>
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
                                 </h4>
                                 <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
                                 <p class="card-text">${ride.route}</p>

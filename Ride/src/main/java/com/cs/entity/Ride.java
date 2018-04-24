@@ -12,6 +12,8 @@ public class Ride implements Serializable {
     private String creatorUserId;
     // 1.not start;2.in processing;3.end;4.flag;
     private String status;
+
+    private String banner;
     private List<User> userList = new ArrayList<User>();
     private Date begindate = new Date();
 
@@ -69,6 +71,14 @@ public class Ride implements Serializable {
 
     public void setBegindate(Date begindate) {
         this.begindate = begindate;
+    }
+
+    public String getBanner() {
+        return banner;
+    }
+
+    public void setBanner(String banner) {
+        this.banner = banner;
     }
 
     @Override

@@ -73,8 +73,6 @@ public class RideServlet extends HttpServlet {
         } else if ("gorideinfo".equalsIgnoreCase(action)) {
 
             String rideId = req.getParameter("id");
-            // this is used for debuging, need remove this code,when the data ready
-            rideId = "1";
             Ride ride = rideService.getRide(rideId);
             req.setAttribute("route", ride.getRoute());
             req.setAttribute("status", ride.getStatus());
@@ -101,13 +99,14 @@ public class RideServlet extends HttpServlet {
      * @Date:4/23/2018_4:19 AM
      * @Description: save sign up
      */
-    private void addRide(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    private void addRide(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         String route = req.getParameter("route");
         String begindate = req.getParameter("begindate");
         Ride ride = new Ride();
         ride.setStatus(NOTSTART);
         ride.setCreatorUserId((String) req.getSession().getAttribute(UserServlet.USERID));
         ride.setBegindate(DateUtil.getDate(begindate, null));
+        ride.setBanner("");
         ride.setRoute(route);
         ride.setId(null);
         ride.setCurrentLocation(null);
