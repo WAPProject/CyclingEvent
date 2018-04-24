@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: tao
-  Date: 2017/4/1 0001
-  Time: 0:12
+  User: xiuba
+  Date: 4/24/2018
+  Time: 2:47 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
@@ -20,22 +20,20 @@
     <form class="login-container" action="ride?action=add" method="post" >
         <h3 class="title">Create Ride</h3>
         <div class="item">
-            <label >route name
-                <input name="route" class="input" type="text"  required="true" placeholder="Ride name">
+            <label >Route name
+                <input name="route" class="input" type="text"  placeholder="Route name">
             </label>
         </div>
         <div class="item">
-            <label >begindate
-                <input name="begindate" class="input"  type = "date" required="true"  />
+            <label >Begindate
+                <input type="date"  name="begindate" required="required"/>
             </label>
         </div>
-
         <div class="item">
-            <label >cover image
-                <input  type="text"  name="banner"  required="true" >
+            <label >Cover image
+                <input  type="text"  name="banner" placeholder="Cover image url" >
             </label>
         </div>
-
         <div class="item">
             <label >
                 <input class="submit"  type="submit" value="Create">
@@ -48,11 +46,9 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<%--<script src="js/bootstrap-table.js"></script>--%>
-<%--<script src="js/bootstrap-datetimepicker.min.js"></script>--%>
 <script src="js/vue.js"></script>
 <script src="js/app.js"></script>
 <script src="js/ajaxfileupload.js"></script>
-<script src="js/ride.js"></script>
+<script src="js/ridecreate.js"></script>
 </body>
 </html>
