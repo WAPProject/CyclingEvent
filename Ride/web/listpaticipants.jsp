@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,14 +19,35 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/ride-homepage.css" rel="stylesheet">
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-<h2>${fn:length(userList)} paticipants</h2>
-<ol>
-<c:forEach items="${userList}" var="user">
-    <li>Name:${user.name} Email:${user.email}</li>
-</c:forEach>
-</ol>
+
+<h2 class="alert alert-info">Paticipant Number : ${fn:length(userList)}  </h2>
+<table class="table table-striped">
+
+    <thead>
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody><c:forEach items="${userList}" var="user" varStatus="status">
+        <tr>
+            <td>${status.count}</td>
+            <td>Name:${user.name}</td>
+            <td>UserName:${user.username}</td>
+            <td>Email:${user.email}</td>
+        </tr>
+    </c:forEach></tbody>
+</table>
+
 </body>
 </html>
