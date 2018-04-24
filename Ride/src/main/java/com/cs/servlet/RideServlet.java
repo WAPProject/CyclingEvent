@@ -72,8 +72,6 @@ public class RideServlet extends HttpServlet {
         } else if("gorideinfo".equalsIgnoreCase(action)){
 
             String rideId = req.getParameter("id");
-            // this is used for debuging, need remove this code,when the data ready
-            rideId = "1";
             Ride ride = rideService.getRide(rideId);
             req.setAttribute("route", ride.getRoute());
             req.setAttribute("status", ride.getStatus());
