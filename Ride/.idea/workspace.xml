@@ -2,105 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ride" />
+      <artifact name="ride:Web exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c753eb10-dfce-414f-9872-96df18e127ec" name="Default" comment="Merge branch 'master' of https://github.com/WAPProject/CyclingEvent&#10;&#10;# Conflicts:&#10;#&#9;Ride/web/homepage.jsp">
-      <change afterPath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/rideinfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/servlet/UploadServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cs/util/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/img/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/ajaxfileupload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/ride.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/rideinfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ride_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ride.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ride.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/dao/MybatisUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/dao/RideMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/dao/TestMyBatis.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/dao/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/entity/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/entity/Ride.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/service/RideService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/servlet/CharsetFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/servlet/LoginFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/servlet/RideServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/servlet/RideServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/servlet/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/util/DBUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/util/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/com/cs/util/JsonUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/db.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/apiguardian-api-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/json-simple-1.1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/junit-jupiter-api-5.2.0-RC1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/junit-platform-commons-1.2.0-RC1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/log4j-1.2.17.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/mybatis-3.4.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/opentest4j-1.0.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/protobuf-java-2.6.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/slf4j-api-1.7.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/slf4j-log4j12-1.7.21.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/lib/standard-1.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/bootstrap-combined.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/bootstrap-table.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/ride-homepage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/homepage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/js/vue.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/listpaticipants.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/ride.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/rideinfo.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/artifacts/ride_war_exploded/vendor/jquery/jquery.slim.min.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/dao/RideMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/dao/RideMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/entity/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/entity/Ride.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cs/servlet/RideServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cs/servlet/RideServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cs/dao/RideMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cs/dao/RideMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cs/entity/Ride.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cs/entity/Ride.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cs/servlet/RideServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cs/servlet/RideServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/homepage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/ride.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/ride.jsp" afterDir="false" />
     </list>
     <ignored path="ride.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,8 +53,8 @@
       <file leaf-file-name="RideServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/servlet/RideServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="243">
+              <caret line="96" column="37" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RideMapper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RideMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/RideMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-471">
-              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="27">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -161,26 +74,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
+            <state relative-caret-position="481">
               <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14607">
-              <caret line="579" column="19" selection-start-line="579" selection-start-column="19" selection-end-line="579" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listpaticipants.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/listpaticipants.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -188,35 +83,35 @@
       <file leaf-file-name="homepage.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2106">
-              <caret line="78" column="42" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="42" />
+            <state relative-caret-position="189">
+              <caret line="102" column="64" selection-start-line="102" selection-start-column="56" selection-end-line="102" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="listpaticipants.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/listpaticipants.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="6" lean-forward="true" selection-end-line="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showmessage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/showmessage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/homepage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2187">
-              <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MybatisUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/MybatisUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="398">
+              <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -234,6 +129,9 @@
     <findStrings>
       <find>start</find>
       <find>Home</find>
+      <find>join</find>
+      <find>env</find>
+      <find>emer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -259,10 +157,11 @@
         <option value="$PROJECT_DIR$/web/ride.jsp" />
         <option value="$PROJECT_DIR$/web/listpaticipants.jsp" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/web/homepage.jsp" />
-        <option value="$PROJECT_DIR$/web/js/homepage.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cs/servlet/RideServlet.java" />
+        <option value="$PROJECT_DIR$/web/showmessage.jsp" />
+        <option value="$PROJECT_DIR$/web/homepage.jsp" />
+        <option value="$PROJECT_DIR$/web/js/homepage.js" />
       </list>
     </option>
   </component>
@@ -475,13 +374,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ride" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ride" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ride" type="b2602c69:ProjectViewProjectNode" />
@@ -515,6 +424,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -532,19 +449,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ride" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ride" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/classes/artifacts/ride_explore_2" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3809524" />
@@ -748,7 +683,7 @@
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="ride">
+        <artifact name="ride:Web exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -813,6 +748,7 @@
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="ride" />
+          <artifact name="ride:Web exploded" />
         </option>
       </method>
     </configuration>
@@ -1157,6 +1093,7 @@
       <workItem from="1524521425468" duration="9359000" />
       <workItem from="1524531413861" duration="6525000" />
       <workItem from="1524538086767" duration="3688000" />
+      <workItem from="1524543480206" duration="7969000" />
     </task>
     <task id="LOCAL-00001" summary="commit local">
       <created>1524499061667</created>
@@ -1286,10 +1223,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38344000" />
+    <option name="totallyTimeSpent" value="46313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015129" side_tool="true" weight="0.3962264" />
@@ -1302,19 +1240,18 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.3962264" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.49914238" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49848714" weight="0.32933104" />
       <window_info id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" visible="true" weight="0.32933104" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49924356" weight="0.32933104" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32418525" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.5025381" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.38765007" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33888048" />
-      <window_info anchor="bottom" id="Problems" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23827533" />
+      <window_info anchor="bottom" id="Problems" order="9" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -1322,6 +1259,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="5" sideWeight="0.5025381" side_tool="true" weight="0.32980332" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
@@ -1376,27 +1314,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/cs/service/UserServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -1661,56 +1578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/listpaticipants.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/web/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14607">
-          <caret line="579" column="19" selection-start-line="579" selection-start-column="19" selection-end-line="579" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="78" column="42" selection-start-line="78" selection-start-column="34" selection-end-line="78" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/homepage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2187">
-          <caret line="81" column="44" selection-start-line="81" selection-start-column="44" selection-end-line="81" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/MybatisUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/com/google/code/gson/gson/2.8.2/gson-2.8.2.jar!/com/google/gson/Gson.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -1718,20 +1586,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/RideMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="579" column="19" selection-start-line="579" selection-start-column="19" selection-end-line="579" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/MybatisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="4" column="3911" selection-start-line="4" selection-start-column="3911" selection-end-line="4" selection-end-column="3911" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/ride-homepage.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/servlet/RideServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="243">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cs/dao/RideMapper.java">
+    <entry file="file://$PROJECT_DIR$/web/listpaticipants.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-471">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        <state relative-caret-position="297">
+          <caret line="11" column="6" lean-forward="true" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="102" column="64" selection-start-line="102" selection-start-column="56" selection-end-line="102" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/showmessage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="43" column="33" lean-forward="true" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/homepage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="73" column="27" lean-forward="true" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1741,7 +1675,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ride</last-edited>
+          <last-edited>ride:Web exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
