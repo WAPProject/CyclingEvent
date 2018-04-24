@@ -26,7 +26,7 @@ public interface RideMapper {
 	 * @param ride
 	 * @Description: add ride
 	 */
-	@Insert("insert into ride values (null,#{route},#{creatorUserId},#{status},#{currentLocation},#{begindate})")
+	@Insert("insert into ride values (null,#{route},#{creatorUserId},#{status},#{currentLocation},#{begindate},#{banner})")
 	public void addRide(Ride ride);
 	/**
 	*@Author:Yanlong
