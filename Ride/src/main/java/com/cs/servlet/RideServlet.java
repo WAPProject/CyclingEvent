@@ -91,6 +91,11 @@ public class RideServlet extends HttpServlet {
             System.out.println(json);
             resp.getWriter().print(json);
             resp.flushBuffer();
+        }else if("showmessage".equalsIgnoreCase(action)){
+            List<Message> msgList = rideService.listFlagUserAndMsg("asc");
+            msgList = msgList.stream().filter(message -> Arrays.stream(message.getPaticipantids().split(",")).anyMatch(id -> id.equalsIgnoreCase((String) req.getSession().getAttribute(UserServlet.USERID)))).collect(Collectors.toList());
+            req.setAttribute("msglist", msgList);//flag message
+            req.getRequestDispatcher(req.getContextPath() + "/showmessage.jsp").forward(req, resp);
         }
 
     }

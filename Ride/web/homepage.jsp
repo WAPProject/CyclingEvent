@@ -13,12 +13,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
 
     <title>Ride Website</title>
@@ -60,7 +60,6 @@
 </div>
 
 
-
 <!-- Navigation -->
 <%----%>
 <%--bigdragon--%>
@@ -68,7 +67,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
         <a class="navbar-brand" href="ride?action=create">Create a ride</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -76,10 +76,9 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home
                         <span class="sr-only">(current)</span>
-                        <span id="envelope"></span>
+
                     </a>
                 </li>
-
 
                 <li class="nav-item">
                     <a class="nav-link" href="user?action=logout">Logout</a>
@@ -98,9 +97,10 @@
 
             <h1 class="my-4"></h1>
             <div class="list-group">
-                <a href="#" class="list-group-item OutgoingBtn" >Ongoing</a>
+                <a href="#" class="list-group-item OutgoingBtn">Ongoing</a>
                 <a href="#" class="list-group-item FlagBtn">Flag</a>
                 <a href="#" class="list-group-item UpcommingBtn">Upcomming</a>
+                <a href="#" class="list-group-item" id="messages"><span id="envelope"  class=" glyphicon glyphicon-envelope"></span></a>
             </div>
 
         </div>
@@ -136,21 +136,24 @@
             </div>
 
             <div class="row">
-                <c:forEach varStatus="status" items="${notstart}" var="ride" >
+                <c:forEach varStatus="status" items="${notstart}" var="ride">
                     <div class="col-lg-4 col-md-6 mb-4 notstart">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px" alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"
+                                             alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
                                     <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
                                 </h4>
-                                <h5><a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <h5><a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}"
+                                       target="_blank">See Members</a></h5>
                                 <p class="card-text">${ride.route}</p>
                             </div>
                             <div class="card-footer">
-                                <button type="button"  class="btn btn-warning join" rideId="${ride.id}" >join</button>
+                                <button type="button" class="btn btn-warning join" rideId="${ride.id}">join</button>
                                 <c:if test="${ride.creatorUserId eq currentuserid}">
-                                <button type="button"  class="btn btn-success start" rideId="${ride.id}" >Start</button>
+                                    <button type="button" class="btn btn-success start" rideId="${ride.id}">Start
+                                    </button>
                                 </c:if>
                             </div>
                         </div>
@@ -158,49 +161,54 @@
                 </c:forEach>
 
 
-            <c:forEach var="ride"  items="${inprocessing}" varStatus="status">
-                <div class="col-lg-4 col-md-6 mb-4 inprocessing">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
-                            </h4>
-                            <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
-                            <p class="card-text">${ride.route}</p>
-                        </div>
-                        <div class="card-footer">
-                            <button type="button"  class="btn btn-default join" rideId="${ride.id}"  >Join</button>
-                            <%--<button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause" data-toggle="modal" data-target="#myModal" >Pause</button>--%>
-                            <button type="button"  class="btn btn-danger pause" rideId="${ride.id}"    >Pause</button>
-                            <button type="button"  class="btn btn-warning endRide"    rideId="${ride.id}" >End</button>
-                            <%--<button type="button"  class="btn btn-success " >Start</button>--%>
-                        </div>
-                    </div>
-                </div>
-            </c:forEach>
-
-                <c:forEach var="ride"  items="${flag}" varStatus="status">
-                    <div class="col-lg-4 col-md-6 mb-4 flag">
+                <c:forEach var="ride" items="${inprocessing}" varStatus="status">
+                    <div class="col-lg-4 col-md-6 mb-4 inprocessing">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"  alt=""></a>
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"
+                                             alt=""></a>
                             <div class="card-body">
                                 <h4 class="card-title">
-                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">Ride ${status.count}</a>
                                 </h4>
-                                <h5><a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}" target="_blank">See Members</a></h5>
+                                <h5>
+                                    <a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}"
+                                       target="_blank">See Members</a></h5>
                                 <p class="card-text">${ride.route}</p>
                             </div>
                             <div class="card-footer">
-                                    <%--<button type="button"  class="btn btn-default " >Join</button>--%>
-                                    <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
-                                    <button type="button"  class="btn btn-warning resume"  rideId="${ride.id}" >Resume</button>
-                                <%--<button type="button"  class="btn btn-success " id="start" rideId="${fride.id}" >Start</button>--%>
+                                <button type="button" class="btn btn-default join" rideId="${ride.id}">Join</button>
+                                    <%--<button type="button"  class="btn btn-danger " rideId="${ride.id}"  id="pause" data-toggle="modal" data-target="#myModal" >Pause</button>--%>
+                                <button type="button" class="btn btn-danger pause" rideId="${ride.id}">Pause</button>
+                                <button type="button" class="btn btn-warning endRide" rideId="${ride.id}">End</button>
+                                    <%--<button type="button"  class="btn btn-success " >Start</button>--%>
                             </div>
                         </div>
                     </div>
                 </c:forEach>
 
+                <c:forEach var="ride" items="${flag}" varStatus="status">
+                    <div class="col-lg-4 col-md-6 mb-4 flag">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="${ride.banner}" width="400px" height="700px"
+                                             alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    <a href="${pageContext.request.contextPath}/ride?action=gorideinfo&id=${ride.id}">${status.count}</a>
+                                </h4>
+                                <h5>
+                                    <a href="${pageContext.request.contextPath}/ride?action=listpaticipants&id=${ride.id}"
+                                       target="_blank">See Members</a></h5>
+                                <p class="card-text">${ride.route}</p>
+                            </div>
+                            <div class="card-footer">
+                                    <%--<button type="button"  class="btn btn-default " >Join</button>--%>
+                                    <%--<button type="button"  class="btn btn-danger " data-toggle="modal" data-target="#myModal" >Pause</button>--%>
+                                <button type="button" class="btn btn-warning resume" rideId="${ride.id}">Resume</button>
+                                    <%--<button type="button"  class="btn btn-success " id="start" rideId="${fride.id}" >Start</button>--%>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
 
 
             </div>
@@ -218,7 +226,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy;  MUM 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; MUM 2018</p>
     </div>
     <!-- /.container -->
 </footer>

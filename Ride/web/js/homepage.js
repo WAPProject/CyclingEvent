@@ -63,16 +63,19 @@ $(function(){
         window.location.href=getRootPath()+"/ride?action=end&id="+id;
     });
 
-
+    $("#messages").hide();
     setInterval(function(){
         $.get(getRootPath()+'/ride?action=message').done(function(o){
-            console.log(o);
+            console.log(typeof o +  '=>'+ o);
             let obj = JSON.parse(o);
-            console.log(typeof obj);
-            let msgArray = o.msglist;
-            $('#envelope').html(msgArray.length);
-        })
+            // console.log(typeof obj);
+            // let msgArray = o.msglist;
+            $('#envelope').html($('<a>').attr('href',getRootPath()+'/ride?action=showmessage').attr('target', '_blank').text(obj.length + ' emergency flag(s)').css('color','red'));
+            if(obj.length){
+                $("#messages").show();
+            }
+        });
 
-    },20000);
+    },2000);
 
 })
