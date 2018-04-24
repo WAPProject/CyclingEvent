@@ -36,6 +36,7 @@ public class RideServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
         if ("add".equalsIgnoreCase(action)) {
+            System.out.println("add ride event");
             addRide(req, resp);
         } else if ("homepage".equalsIgnoreCase(action)) {
             List<Ride> notStartRideList = rideService.listRideByStatus(NOTSTART, "asc");
@@ -74,7 +75,6 @@ public class RideServlet extends HttpServlet {
             rideService.updateStatus(rideId, INPROCESSING);
             resp.sendRedirect(req.getContextPath() + "/ride?action=homepage");
         } else if ("gorideinfo".equalsIgnoreCase(action)) {
-
             String rideId = req.getParameter("id");
             Ride ride = rideService.getRide(rideId);
             req.setAttribute("route", ride.getRoute());
@@ -83,12 +83,11 @@ public class RideServlet extends HttpServlet {
             req.setAttribute("begindate", ride.getBegindate());
             req.getRequestDispatcher(req.getContextPath() + "/rideinfo.jsp").forward(req, resp);
         } else if ("create".equalsIgnoreCase(action)) {
-            req.getRequestDispatcher(req.getContextPath() + "/ride.jsp").forward(req, resp);
+            req.getRequestDispatcher(req.getContextPath() + "/ridecreate.jsp").forward(req, resp);
         } else if ("rideusers".equalsIgnoreCase(action)) {
             PrintWriter out = resp.getWriter();
             String rideId = req.getParameter("id");
             List<User> userList = rideService.listPaticipant(rideId);
-            //json object
             JSONObject[] results = new JSONObject[userList.size()];
             int i = 0;
             for(User user: userList){
