@@ -23,6 +23,7 @@ $(function(){
         dataType : "json",
         success : function(result) {
 
+            console.log("result:"+result);
             var tablebody = $("#ridinfousers");
             for (var i = 0; i < result.length; i++) {
                 console.log(result[i].name);

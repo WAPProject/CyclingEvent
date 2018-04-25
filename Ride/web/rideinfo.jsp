@@ -20,8 +20,6 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-table.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/app.js"></script>
     <script src="js/rideinfo.js" type="text/javascript"></script>
@@ -63,11 +61,6 @@
         <div class="item">
             <label >
                 <span >Status: <%= request.getAttribute("status")%></span>
-            </label>
-        </div>
-        <div class="item">
-            <label >
-                <span >CurrentLocation: <%= request.getAttribute("location")%></span>
             </label>
         </div>
         <div class="item">
